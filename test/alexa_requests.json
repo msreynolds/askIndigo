@@ -1,0 +1,219 @@
+/**
+ * Created by Matt Reynolds (matt@mtnlabs.com) on 8/1/15.
+ * Mountain Labs, LLC 2015 (mtnlabs.com)
+ *
+ * Project: ASKIndigo
+ * Indigo Domotics plugin for the ASK (Alexa Skill Kit) Platform used by the Amazon Echo
+ */
+
+
+
+/**
+ Test Input:
+ What is the current energy use
+ */
+{
+    "session": {
+        "new": false,
+        "sessionId": "session1234",
+        "attributes": {},
+        "user": {
+            "userId": null
+        },
+        "application": {
+            "applicationId": "amzn1.echo-sdk-ams.app.xxxxxx"
+        }
+    },
+    "version": "1.0",
+    "request": {
+        "intent": {
+            "slots": {
+                "VariableName": {
+                    "name": "VariableName",
+                    "value": "current energy use"
+                }
+            },
+            "name": "GetVariableIntent"
+        },
+        "type": "IntentRequest",
+        "requestId": "request5678"
+    }
+}
+/**
+Test Output:
+Variable: KWNow
+Get variable value KWNow
+Making request: https://somedomain.goprism.com/variables/KWNow.txt?_method=get
+*/
+
+
+/**
+ Test Input:
+ Turn off the Guest Bathroom Light
+ */
+{
+    "session": {
+        "new": false,
+        "sessionId": "session1234",
+        "attributes": {},
+        "user": {
+            "userId": null
+        },
+        "application": {
+            "applicationId": "amzn1.echo-sdk-ams.app.xxxxxx"
+        }
+    },
+    "version": "1.0",
+    "request": {
+        "intent": {
+            "slots": {
+                "Device": {
+                    "name": "Device",
+                        "value": "Guest Bathroom Light"
+                },
+                "Binary": {
+                    "name": "Binary",
+                        "value": "off"
+                }
+
+            },
+            "name": "DeviceChangeIntent"
+        },
+        "type": "IntentRequest",
+            "requestId": "request5678"
+    }
+}
+/**
+Test Output:
+Device: Guest Bathroom Light
+Turning off the Guest Bathroom Light
+Making request: https://somedomain.goprism.com/devices/Guest%20Bathroom%20Light?isOn=0&_method=put
+*/
+
+/**
+Test Input:
+Dim the Guest Bathroom Light to 77 percent
+*/
+{
+    "session": {
+        "new": false,
+        "sessionId": "session1234",
+        "attributes": {},
+        "user": {
+            "userId": null
+        },
+        "application": {
+            "applicationId": "amzn1.echo-sdk-ams.app.xxxxxx"
+        }
+    },
+    "version": "1.0",
+    "request": {
+        "intent": {
+            "slots": {
+                "Device": {
+                    "name": "Device",
+                    "value": "Guest Bathroom Light"
+                },
+                "Percent": {
+                    "name": "Percent",
+                    "value": "77"
+                }
+
+            },
+            "name": "DeviceChangeIntent"
+        },
+        "type": "IntentRequest",
+        "requestId": "request5678"
+    }
+}
+
+/**
+Test Output:
+Device: Guest Bathroom Light
+Setting Brightness of Guest Bathroom Light to 77 percent
+Making request: https://somedomain.goprism.com/devices/Guest%20Bathroom%20Light?brightness=77&_method=put
+*/
+
+/**
+ Test Input:
+ Set Thermostat to 72 degrees
+ */
+{
+    "session": {
+        "new": false,
+            "sessionId": "session1234",
+            "attributes": {},
+        "user": {
+            "userId": null
+        },
+        "application": {
+            "applicationId": "amzn1.echo-sdk-ams.app.xxxxxx"
+        }
+},
+    "version": "1.0",
+    "request": {
+        "intent": {
+            "slots": {
+                "Device": {
+                    "name": "Device",
+                        "value": "Thermostat"
+                },
+                "Numerical": {
+                    "name": "Numerical",
+                        "value": "72"
+                }
+
+            },
+            "name": "DeviceChangeIntent"
+        },
+        "type": "IntentRequest",
+            "requestId": "request5678"
+    }
+}
+/**
+Test Output:
+Device: Thermostat
+Setting Thermostat to 72 degrees
+Making request: https://somedomain.goprism.com/devices/Thermostat?heatpointSet=72&_method=put
+*/
+
+
+/**
+ Test Input:
+ Turn on the living room lights
+ */
+{
+    "session": {
+        "new": false,
+            "sessionId": "session1234",
+            "attributes": {},
+        "user": {
+            "userId": null
+        },
+        "application": {
+            "applicationId": "amzn1.echo-sdk-ams.app.xxxxxx"
+        }
+},
+    "version": "1.0",
+    "request": {
+        "intent": {
+            "slots": {
+                "ActionName": {
+                    "name": "ActionName",
+                    "value": "turn on the living room lights"
+                }
+            },
+            "name": "RunActionIntent"
+        },
+        "type": "IntentRequest",
+            "requestId": "request5678"
+    }
+}
+/**
+Test Output:
+Action: turn on the living room lights
+Running turn on the living room lights
+Making request: https://somedomain.goprism.com/action/turn%20on%20the%20living%20room%20lights?execute=true
+*/
+
+

@@ -1,0 +1,52 @@
+/**
+ * Created by Matt Reynolds (matt@mtnlabs.com) on 8/1/15.
+ * Mountain Labs, LLC 2015
+ *
+ * Project: ASKIndigo
+ * Indigo Domotics plugin for the ASK (Alexa Skill Kit) Platform used by the Amazon Echo
+ */
+
+{
+    "intents":
+    [
+        {
+            "intent": "RunActionIntent",
+            "slots": [
+                {
+                    "name": "ActionName",
+                    "type": "LITERAL"
+                }
+            ]
+        },
+        {
+            "intent": "DeviceChangeIntent",
+            "slots": [
+                {
+                    "name": "Device",
+                    "type": "LITERAL"
+                },
+                {
+                    "name": "Binary",
+                    "type": "LITERAL"
+                },
+                {
+                    "name": "Numerical",
+                    "type": "NUMBER"
+                },
+                {
+                    "name": "Percent",
+                    "type": "NUMBER"
+                }
+            ]
+        },
+        {
+            "intent": "GetVariableIntent",
+            "slots": [
+                {
+                    "name": "VariableName",
+                    "type": "LITERAL"
+                }
+            ]
+        }
+    ]
+}

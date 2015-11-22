@@ -1,0 +1,21 @@
+{
+  "name": "askIndigo",
+  "version": "0.0.1",
+  "description": "Indigo Domotics plugin for the ASK (Alexa Skill Kit) Platform used by the Amazon Echo",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/msreynolds/askindigo.git"
+  },
+  "author": "msreynolds",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msreynolds/askIndigo/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/msreynolds/askindigo",
+  "dependencies": {
+    "request-digest": "0.0.9",
+    "dotenv": "^1.2.0"
+  }
+}
