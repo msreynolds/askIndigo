@@ -74,8 +74,8 @@ exports.handler = function (event, context) {
 
 /** gives the welcome greeting */
 function getWelcomeResponse(response) {
-    var speechOutput = "Ok, what should Jarvis do?";
-    var repromptText = "I did not understand you, what should Jarvis do?";
+    var speechOutput = "Ok, what should " + process.env.SKILL_CALL_SIGN + " do?";
+    var repromptText = "I did not understand you, what should " + process.env.SKILL_CALL_SIGN + " do?";
     response.ask(speechOutput, repromptText);
 }
 
