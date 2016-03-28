@@ -16,7 +16,7 @@ request: https://somedomain.goprism.com/devices/guest%20bathroom%20light?isOn=0&
 Alexa: "Ok"
 
 echo user: "Alexa, ask Indigo to turn on the guest bedroom heated floor"
-request: https://somedomain.goprism.com/devices/guest%20bathroom%20heated%20floor?isOn=1&_method=put
+request: https://somedomain.goprism.com/devices/guest%20bedroom%20heated%20floor?isOn=1&_method=put
 Alexa: "Ok"
 
 echo user: "Alexa, ask Indigo to set the thermostat to 72 degrees"
