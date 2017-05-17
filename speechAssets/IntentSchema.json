@@ -1,6 +1,6 @@
 /**
- * Created by Matt Reynolds (matt@mtnlabs.com) on 8/1/15.
- * Mountain Labs, LLC 2015
+ * Created by Matt Reynolds (matt@mtnlabs.com).
+ * Mountain Labs, LLC 2017
  *
  * Project: ASKIndigo
  * Indigo Domotics plugin for the ASK (Alexa Skill Kit) Platform used by the Amazon Echo
@@ -19,7 +19,7 @@
             ]
         },
         {
-            "intent": "DeviceChangeIntent",
+            "intent": "ChangeDeviceIntent",
             "slots": [
                 {
                     "name": "Device",
