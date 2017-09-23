@@ -9,7 +9,7 @@
 'use strict';
 
 require('dotenv').load();
-
+// var util = require('util');
 var Alexa = require('alexa-sdk');
 
 exports.handler = function (event, context) {
@@ -34,7 +34,7 @@ var handlers = {
 		console.log('AMAZON Help Intent');
 		getHelpResponse();
 	},
-	'ChangeDeviceIntent': function () {
+	'DeviceChangeIntent': function () {
 		console.log('Device Change Intent');
 		setDevice(this.event.request.intent, this.emit);
 	},
@@ -143,7 +143,7 @@ function getVariable(intent, speechCallback) {
 	var urlParameters = "?_method=get";
 	var path = "/variables/" + encodeURIComponent(variableName) + ".txt" + urlParameters;
 
-	makeRequest(path, description, variableName, requestType, speechCallback);
+	makeRequest(path, description, intent.slots.VariableName.value, requestType, speechCallback);
 }
 
 
@@ -168,10 +168,6 @@ function makeRequest(path, description, slotValue, requestType, speechCallback) 
 		port: process.env.INDIGO_PORT,
 		method: 'GET'
 	}, function (error, res, body) {
-		// console.log('Error: ' + util.inspect(error, {showHidden: false, depth: null}));
-		// console.log('Response: ' + util.inspect(res, {showHidden: false, depth: null}));
-		// console.log('Body: ' + util.inspect(body, {showHidden: false, depth: null}));
-		//console.log('Output: ' + getSpeechOutput(error, body, slotValue, requestType));
 		speechCallback(':tell', getSpeechOutput(error, body, slotValue, requestType));
 	});
 }

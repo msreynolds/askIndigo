@@ -16,6 +16,7 @@
   "dependencies": {
     "alexa-sdk": "^1.0.0",
     "request-digest": "0.0.9",
+    "util": "0.10.3",
     "dotenv": "^1.2.0"
   }
 }
